@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hostel Page</title>
+    <link rel="stylesheet" href="hostel.css">
+    <link rel="stylesheet" href="navigation.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://ioit.akronsystems.com/images/LoginBG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+    </style>
+    <style>
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s;
+        }
+    </style>
+    <script src="hostel.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            const slideshows = document.querySelectorAll(".slideshow");
+
+            slideshows.forEach(function(slideshow) {
+                const images = slideshow.querySelectorAll("img");
+                let index = 0;
+
+                setInterval(function() {
+                    images[index].style.opacity = 0;
+
+                    index++;
+                    if (index === images.length) {
+                        index = 0;
+                    }
+
+                    images[index].style.opacity = 1;
+                }, 1300);
+            });
+        });
+    </script>
+</head>
+<body>
+    <section id="navigation">
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li class="select-wrapper">
+                <select name="Year" id="year" onchange="redirectToPage(this.value)">
+                    <option value="">--Services--</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Mess">Mess</option>
+                    <option value="Rooms">Rooms/Flats</option>
+                    <option value="Stationary">Stationary</option>
+                </select>
+            </li>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            
+        </ul>
+        <script>
+            function redirectToPage(selectedOption) {
+                if (selectedOption) {
+                    var pageURL = ""; // Set the corresponding page URL based on the selected option
+                    
+                    if (selectedOption === "Hostel") {
+                        pageURL = "hostel.html";
+                    } else if (selectedOption === "Mess") {
+                        pageURL = "mess.html";
+                    } else if (selectedOption === "Rooms") {
+                        pageURL = "rooms.html";
+                    } else if (selectedOption === "Stationary") {
+                        pageURL = "stationary.html"
+                        
+                    }
+                    
+                    if (pageURL) {
+                        window.location.href = pageURL;
+                    }
+                }
+            }
+            </script>
+            
+        
+    </section>
+    <h1 style="text-align: center;">Hostels</h1>
+    <div class="hostel-container">
+        <div class="hostel">
+            <div class="slideshow">
+                <img src="/Photos/download (5).jpg" alt="Hostel 1">
+                <img src="/Photos/download(7).jpg" alt="Hostel 1">
+                <img src="/Photos/download(8).jpg" alt="Hostel 2">  
+                <img src="/Photos/download (6).jpg" alt="Hostel 2">
+            </div>
+            <h2>Staywel Boys Hostel</h2>
+            <p>Rent: $500/month</p>
+            <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+            <p>Facilities: Wi-Fi, Gym, Study Room</p>
+        </div>
+        <div class="hostel">
+            <div class="slideshow">
+                <img src="/Photos/download (1).jpg" alt="Hostel 1">
+                <img src="/Photos/download (2).jpg" alt="Hostel 2">
+                <img src="/Photos/download (3).jpg" alt="Hostel 1">
+                <img src="/Photos/download (4).jpg" alt="Hostel 2">
+            </div>
+            <h2>Sanjay Hostel</h2>
+            <p>Rent: $450/month</p>
+            <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+            <p>Facilities: Laundry, Common Kitchen</p>
+        </div>
+        <div class="hostel">
+            <div class="slideshow">    
+                <img src="/Photos/download (5).jpg" alt="Hostel 1">
+                <img src="/Photos/download (6).jpg" alt="Hostel 2">
+                <img src="/Photos/download(7).jpg" alt="Hostel 1">
+                <img src="/Photos/download(8).jpg" alt="Hostel 2">         
+            </div>
+            <h2>Staywel Boys Hostel</h2>
+            <p>Rent: $500/month</p>
+            <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+            <p>Facilities: Wi-Fi, Gym, Study Room</p>
+        </div>
+        <div class="hostel">
+            <div class="slideshow"> 
+                <img src="/Photos/download (2).jpg" alt="Hostel 2">
+                <img src="/Photos/download (3).jpg" alt="Hostel 1">
+                <img src="/Photos/download (4).jpg" alt="Hostel 2">         
+                <img src="/Photos/download (1).jpg" alt="Hostel 1">
+            </div>
+            <h2>Sanjay Hostel</h2>
+            <p>Rent: $450/month</p>
+            <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+            <p>Facilities: Laundry, Common Kitchen</p>
+        </div>
+        <div class="hostel">
+            <div class="slideshow">  
+                <img src="/Photos/download (6).jpg" alt="Hostel 2">
+                <img src="/Photos/download(7).jpg" alt="Hostel 1">
+                <img src="/Photos/download(8).jpg" alt="Hostel 2">           
+                <img src="/Photos/download (5).jpg" alt="Hostel 1">
+            </div>
+            <h2>Staywel Boys Hostel</h2>
+            <p>Rent: $500/month</p>
+            <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+            <p>Facilities: Wi-Fi, Gym, Study Room</p>
+        </div>
+        <div class="hostel">
+            <div class="slideshow">
+                <img src="/Photos/download(7).jpg" alt="Hostel 1">
+                <img src="/Photos/download (5).jpg" alt="Hostel 1">
+                <img src="/Photos/download (6).jpg" alt="Hostel 2">
+                <img src="/Photos/download(8).jpg" alt="Hostel 2">  
+            </div>
+            <h2>Sanjay Hostel</h2>
+            <p>Rent: $450/month</p>
+            <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+            <p>Facilities: Laundry, Common Kitchen</p>
+        </div>
+        <!-- Add more hostel entries as needed -->
+    </div>
+</body>
+</html>

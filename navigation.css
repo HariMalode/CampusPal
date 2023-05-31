@@ -1,0 +1,63 @@
+/* Customized CSS for navigation bar */
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f44336;
+    height: 50px;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  .navbar a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #ff6659;
+  }
+  
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .select-wrapper:after {
+    content: '\25BE';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #beb1b1;
+  }
+  
+  .select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    padding: 5px 25px 5px 10px;
+    color: #1c1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .select-wrapper select:focus {
+    outline: none;
+    background-color: rgba(211, 31, 31, 0.2);
+  }
+  
