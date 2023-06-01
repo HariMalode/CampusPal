@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mess Page</title>
+    <link rel="stylesheet" href="hostel.css">
+    <link rel="stylesheet" href="navigation.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://ioit.akronsystems.com/images/LoginBG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+    </style>
+</head>
+<body>
+    <section id="navigation">
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li class="select-wrapper">
+                <select name="Year" id="year" onchange="redirectToPage(this.value)">
+                    <option value="">--Services--</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Mess">Mess</option>
+                    <option value="Rooms">Rooms/Flats</option>
+                    <option value="Stationary">Stationary</option>
+                </select>
+            </li>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            
+        </ul>
+        <script>
+            function redirectToPage(selectedOption) {
+                if (selectedOption) {
+                    var pageURL = ""; // Set the corresponding page URL based on the selected option
+                    
+                    if (selectedOption === "Hostel") {
+                        pageURL = "hostel.html";
+                    } else if (selectedOption === "Mess") {
+                        pageURL = "mess.html";
+                    } else if (selectedOption === "Rooms") {
+                        pageURL = "rooms.html";
+                    } else if (selectedOption === "Stationary") {
+                        pageURL = "stationary.html"
+                        
+                    }
+                    
+                    if (pageURL) {
+                        window.location.href = pageURL;
+                    }
+                }
+            }
+            </script>
+            
+        
+    </section>
+    <h1 style="text-align: center;">Mess</h1>
+
+    <select style="text-align: center;" name="college" id="college" onchange="redirectToPageCollege(this.value)">
+        <option value="">--Select College--</option>
+        <option value="aissms">AISSMS IOIT</option>
+        <option value="mmcoe">MMCOE</option>
+        <option value="vit">VIT</option>
+        <option value="pccoe">PCCOE</option>
+    </select>
+    <script>
+        function redirectToPageCollege(value) {
+            if (value !== '') {
+                window.location.hash = value;
+            } else {
+                window.location.hash = '';
+            }
+        }
+    </script>
+
+    <h5 style="text-align: center;">
+        <p style="width: 500px; margin: 0 auto;">"If you liked what you saw in our Mess photos and read about our amazing facilities, we would be thrilled to assist you further! Contact us today to inquiry.Don't miss out on the opportunity to savor culinary delights – reach out to us now and let us make your reservation."</p>
+    </h5>
+
+    <section id="aissms">
+        <h3 style="text-align: center;">AISSMS IOIT</h5>
+            <div class="hostel-container">
+                <div class="hostel">
+                    <img src="mess1.jpg" alt="Mess 1">
+                    <h2>Avishkar Khanaval</h2>
+                    <p>Mess Charges Per month: ₹1500</p>
+                    <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess2.jpg" alt="Mess 2">
+                    <h2>Renuka Mess</h2>
+                    <p>Mess Charges Per month: ₹1200</p>
+                    <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess3.jpg" alt="Mess 3">
+                    <h2>Kuber Bhojnalay</h2>
+                    <p>Mess Charges Per month: ₹1300</p>
+                    <p>Address: 789 ABC Street, Ganesh Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess4.jpg" alt="Mess 4">
+                    <h2>Tanmay's Resto</h2>
+                    <p>Mess Charges Per month: ₹1100</p>
+                    <p>Address: 123 XYZ Street, Aundh, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess5.jpg" alt="Mess 5">
+                    <h2>Shrihari Cafe n Mess</h2>
+                    <p>Mess Charges Per month: ₹1400</p>
+                    <p>Address: 456 PQR Street, Koregaon Park, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess6.jpg" alt="Mess 6">
+                    <h2>Madhav Veg</h2>
+                    <p>Mess Charges Per month: ₹1250</p>
+                    <p>Address: 789 DEF Street, MG Road, Pune</p>
+                </div>
+                <!-- Add more mess entries as needed -->
+            </div>
+    </section>
+
+    <section id="mmcoe">
+        <h3 style="text-align: center;">MMCOE</h5>
+            <div class="hostel-container">
+                <div class="hostel">
+                    <img src="mess1.jpg" alt="Mess 1">
+                    <h2>Avishkar Khanaval</h2>
+                    <p>Mess Charges Per month: ₹1500</p>
+                    <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess2.jpg" alt="Mess 2">
+                    <h2>Renuka Mess</h2>
+                    <p>Mess Charges Per month: ₹1200</p>
+                    <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess3.jpg" alt="Mess 3">
+                    <h2>Kuber Bhojnalay</h2>
+                    <p>Mess Charges Per month: ₹1300</p>
+                    <p>Address: 789 ABC Street, Ganesh Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess4.jpg" alt="Mess 4">
+                    <h2>Tanmay's Resto</h2>
+                    <p>Mess Charges Per month: ₹1100</p>
+                    <p>Address: 123 XYZ Street, Aundh, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess5.jpg" alt="Mess 5">
+                    <h2>Shrihari Cafe n Mess</h2>
+                    <p>Mess Charges Per month: ₹1400</p>
+                    <p>Address: 456 PQR Street, Koregaon Park, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess6.jpg" alt="Mess 6">
+                    <h2>Madhav Veg</h2>
+                    <p>Mess Charges Per month: ₹1250</p>
+                    <p>Address: 789 DEF Street, MG Road, Pune</p>
+                </div>
+                <!-- Add more mess entries as needed -->
+            </div>
+    </section>
+
+    <section id="vit">
+        <h3 style="text-align: center;">VIT Pune</h5>
+            <div class="hostel-container">
+                <div class="hostel">
+                    <img src="mess1.jpg" alt="Mess 1">
+                    <h2>Avishkar Khanaval</h2>
+                    <p>Mess Charges Per month: ₹1500</p>
+                    <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess2.jpg" alt="Mess 2">
+                    <h2>Renuka Mess</h2>
+                    <p>Mess Charges Per month: ₹1200</p>
+                    <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess3.jpg" alt="Mess 3">
+                    <h2>Kuber Bhojnalay</h2>
+                    <p>Mess Charges Per month: ₹1300</p>
+                    <p>Address: 789 ABC Street, Ganesh Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess4.jpg" alt="Mess 4">
+                    <h2>Tanmay's Resto</h2>
+                    <p>Mess Charges Per month: ₹1100</p>
+                    <p>Address: 123 XYZ Street, Aundh, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess5.jpg" alt="Mess 5">
+                    <h2>Shrihari Cafe n Mess</h2>
+                    <p>Mess Charges Per month: ₹1400</p>
+                    <p>Address: 456 PQR Street, Koregaon Park, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess6.jpg" alt="Mess 6">
+                    <h2>Madhav Veg</h2>
+                    <p>Mess Charges Per month: ₹1250</p>
+                    <p>Address: 789 DEF Street, MG Road, Pune</p>
+                </div>
+                <!-- Add more mess entries as needed -->
+            </div>
+    </section>
+
+    <section id="pccoe">
+        <h3 style="text-align: center;">PCCOE Pune</h5>
+            <div class="hostel-container">
+                <div class="hostel">
+                    <img src="mess1.jpg" alt="Mess 1">
+                    <h2>Avishkar Khanaval</h2>
+                    <p>Mess Charges Per month: ₹1500</p>
+                    <p>Address: 123 Main Street, Shivajinagar, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess2.jpg" alt="Mess 2">
+                    <h2>Renuka Mess</h2>
+                    <p>Mess Charges Per month: ₹1200</p>
+                    <p>Address: 456 Elm Street, Somvar Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess3.jpg" alt="Mess 3">
+                    <h2>Kuber Bhojnalay</h2>
+                    <p>Mess Charges Per month: ₹1300</p>
+                    <p>Address: 789 ABC Street, Ganesh Peth, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess4.jpg" alt="Mess 4">
+                    <h2>Tanmay's Resto</h2>
+                    <p>Mess Charges Per month: ₹1100</p>
+                    <p>Address: 123 XYZ Street, Aundh, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess5.jpg" alt="Mess 5">
+                    <h2>Shrihari Cafe n Mess</h2>
+                    <p>Mess Charges Per month: ₹1400</p>
+                    <p>Address: 456 PQR Street, Koregaon Park, Pune</p>
+                </div>
+                <div class="hostel">
+                    <img src="mess6.jpg" alt="Mess 6">
+                    <h2>Madhav Veg</h2>
+                    <p>Mess Charges Per month: ₹1250</p>
+                    <p>Address: 789 DEF Street, MG Road, Pune</p>
+                </div>
+                <!-- Add more mess entries as needed -->
+            </div>
+    </section>
+
+</body>
+</html>

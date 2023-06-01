@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="hostel.css">
+    <style>
+        /* CSS styles for the login page */
+        body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://ioit.akronsystems.com/images/LoginBG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: rgba(80, 106, 224, 0.8);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group button {
+            width: 90%;
+            padding: 8px;
+            background-color: #a72c88;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #659968;
+        }
+
+        form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4e9551;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5eaf62;
+}
+
+.signup-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.signup-button a:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <section id="navigation">
+        
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li class="select-wrapper">
+                <select name="Year" id="year" onchange="redirectToPage(this.value)">
+                    <option value="">--Services--</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Mess">Mess</option>
+                    <option value="Rooms">Rooms/Flats</option>
+                    <option value="Stationary">Stationary</option>
+                </select>
+            </li>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            
+        </ul>
+        <script>
+            function redirectToPage(selectedOption) {
+                if (selectedOption) {
+                    var pageURL = ""; // Set the corresponding page URL based on the selected option
+                    
+                    if (selectedOption === "Hostel") {
+                        pageURL = "hostel.html";
+                    } else if (selectedOption === "Mess") {
+                        pageURL = "mess.html";
+                    } else if (selectedOption === "Rooms") {
+                        pageURL = "rooms.html";
+                    } else if (selectedOption === "Stationary") {
+                        pageURL = "stationary.html"
+                        
+                    }
+                    
+                    if (pageURL) {
+                        window.location.href = pageURL;
+                    }
+                }
+            }
+            </script>
+            
+        
+    </section>
+    <br>
+    
+    <div class="container">
+        <h2>Login</h2>
+
+        <div id="admin-login" class="form-group">
+            <label for="admin-username">Admin Username</label>
+            <input type="text" id="admin-username" placeholder="Enter admin username">
+
+            <label for="admin-password">Admin Password</label>
+            <input type="password" id="admin-password" placeholder="Enter admin password">
+
+            <div class="signup-button">
+                <button onclick="adminLogin()">Login as Admin</button>
+            </div>
+            
+        </div>
+
+        <div id="customer-login" class="form-group">
+            <label for="customer-username">Customer Username</label>
+            <input type="text" id="customer-username" placeholder="Enter customer username">
+
+            <label for="customer-password">Customer Password</label>
+            <input type="password" id="customer-password" placeholder="Enter customer password">
+
+            <div class="signup-button">     
+                <button onclick="customerLogin()">Login as Customer</button>
+            </div>
+        </div>
+
+       
+        <div class="signup-button">
+            <a href="register.html">Sign Up</a>
+        </div>
+        
+
+        
+    </div>
+
+    <script>
+        function adminLogin() {
+            var adminUsername = document.getElementById("admin-username").value;
+            var adminPassword = document.getElementById("admin-password").value;
+
+            if (adminUsername === "hari" && adminPassword === "ioit") {
+                alert("Admin login successful!");
+                // Add your logic for admin login here
+            } else {
+                alert("Invalid admin credentials. Please try again.");
+            }
+        }
+
+        function customerLogin() {
+            var customerUsername = document.getElementById("customer-username").value;
+            var customerPassword = document.getElementById("customer-password").value;
+
+            // Add your logic for customer login here
+        }
+
+       
+    </script>
+
+<br>
+<footer>
+    <p>Have questions or need assistance? Contact our friendly support team at <a href="mailto:support@campuspal.com">support@campuspal.com</a> or call us at XXX-XXX-XXXX.</p>
+    <div>
+      <p>Follow Us on Social Media:</p>
+      <a href="https://facebook.com/campuspal">Facebook</a>
+      <a href="https://twitter.com/campuspal">Twitter</a>
+      <a href="https://instagram.com/campuspal">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>

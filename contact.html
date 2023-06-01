@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <style>
+      body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://ioit.akronsystems.com/images/LoginBG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+  </style>
+</head>
+<body>
+  <section id="navigation">
+    <ul class="navbar">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        
+        <li class="select-wrapper">
+            <select name="Year" id="year" onchange="redirectToPage(this.value)">
+                <option value="">--Services--</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Mess">Mess</option>
+                <option value="Rooms">Rooms/Flats</option>
+                <option value="Stationary">Stationary</option>
+            </select>
+        </li>
+        
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        
+    </ul>
+    <script>
+        function redirectToPage(selectedOption) {
+            if (selectedOption) {
+                var pageURL = ""; // Set the corresponding page URL based on the selected option
+                
+                if (selectedOption === "Hostel") {
+                    pageURL = "hostel.html";
+                } else if (selectedOption === "Mess") {
+                    pageURL = "mess.html";
+                } else if (selectedOption === "Rooms") {
+                    pageURL = "rooms.html";
+                } else if (selectedOption === "Stationary") {
+                    pageURL = "stationary.html"
+                    
+                }
+                
+                if (pageURL) {
+                    window.location.href = pageURL;
+                }
+            }
+        }
+        </script>
+        
+    
+</section>
+    <h1>Contact Us</h1>
+
+    <div class="contact-details">
+        <h2>Address:</h2>
+        <p>AISSMS Institute of Information Technology</p>
+        <p>Kennedy Road, Near R.T.O.</p>
+        <p>Pune – 411 001, Maharashtra (INDIA).</p>
+        <p>Mobile: +91 1231231234</p>
+        <p>Tel: +91 (020) 26057983, 26057636</p>
+        <p>Fax: +91 (020) 2676547</p>
+        <p>Email: support@campuspal.com</p>
+    </div>
+
+    <div class="map-container">
+        <h2>Location:</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1222292557434!2d73.86148091444554!3d18.530782354208768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b912cc49304b%3A0x6b19610ebc9e013a!2sAISSMS%20IOIT%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1622421597547!5m2!1sen!2sin"
+            width="650" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="feedback-form">
+        <h2>Feedback</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <footer>
+        <p>Have questions or need assistance? Contact our friendly support team at <a href="mailto:support@campuspal.com">support@campuspal.com</a> or call us at XXX-XXX-XXXX.</p>
+        <div>
+          <p>Follow Us on Social Media:</p>
+          <a href="https://facebook.com/campuspal">Facebook</a>
+          <a href="https://twitter.com/campuspal">Twitter</a>
+          <a href="https://instagram.com/campuspal">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

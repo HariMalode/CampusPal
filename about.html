@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Pal - Simplifying Your College Experience</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="navigation.css">
+  <style>
+    body {
+font-family: Arial, sans-serif;
+background-image: url('https://ioit.akronsystems.com/images/LoginBG.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+</style>
+
+</head>
+<body>
+    <section id="navigation">
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li class="select-wrapper">
+                <select name="Year" id="year" onchange="redirectToPage(this.value)">
+                    <option value="">--Services--</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Mess">Mess</option>
+                    <option value="Rooms">Rooms/Flats</option>
+                    <option value="Stationary">Stationary</option>
+                </select>
+            </li>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            
+        </ul>
+        <script>
+            function redirectToPage(selectedOption) {
+                if (selectedOption) {
+                    var pageURL = ""; // Set the corresponding page URL based on the selected option
+                    
+                    if (selectedOption === "Hostel") {
+                        pageURL = "hostel.html";
+                    } else if (selectedOption === "Mess") {
+                        pageURL = "mess.html";
+                    } else if (selectedOption === "Rooms") {
+                        pageURL = "rooms.html";
+                    } else if (selectedOption === "Stationary") {
+                        pageURL = "stationary.html"
+                        
+                    }
+                    
+                    if (pageURL) {
+                        window.location.href = pageURL;
+                    }
+                }
+            }
+            </script>
+            
+        
+    </section>
+  <header>
+    <h1>Welcome to Campus Pal!</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBB2gvxd8w2Fv2h597mhGcu6VqyZ7ovvSVmN4piygO1zfmMW5f" alt="Campus Pal Logo">
+  </header>
+
+  <main>
+    <section>
+      <h2>About Campus Pal</h2>
+      <p>Campus Pal is a leading platform dedicated to simplifying the college experience for students. Our mission is to provide a medium through which students can easily find essential facilities necessary for their college life. Whether you are a fresher looking for accommodation, a mess service, or searching for study materials, Campus Pal has you covered. We strive to connect students with the best options available near their college campuses, ensuring convenience, comfort, and success throughout their academic journey.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Comprehensive Facility Search: Find hostels, mess services, rooms for rent, and stationary stores near college campuses in Pune with detailed information and user reviews.</li>
+        <li>Interactive Map Integration: Visualize the proximity of facilities to your college campus, enabling informed decision-making.</li>
+        <li>Personalized Recommendations: Receive tailored recommendations based on your preferences and requirements.</li>
+        <li>Hassle-free Dining: Discover reliable mess services offering delicious and affordable meals.</li>
+        <li>Engaging Community: Connect with fellow students, share experiences, and contribute reviews and ratings.</li>
+        <li>Study Resources: Access textbooks, study materials, and academic resources through partnering stationary stores.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Note</h2>
+      <p>Campus Pal currently serves colleges in Pune, ensuring students in this city have access to the benefits and convenience our platform offers.</p>
+    </section>
+    <section>
+        <h2>Founders</h2>
+        <ul>
+          <li>Hariom Malode (hariom.malode@aissmsioit.org)</li>
+          <li>Sarthak Kute (sarthakkute08@gmail.com)</li>
+          <li>Harshal Mali</li>
+          <li>Darshan Londhe</li>
+          <li>Vikrant Palaskar</li>
+        </ul>
+        <p>The founders of Campus Pal are currently pursuing their second year in Computer Engineering at AISSMS IOIT College in Pune.</p>
+      </section>
+  </main>
+
+  <footer>
+    <p>Have questions or need assistance? Contact our friendly support team at <a href="mailto:support@campuspal.com">support@campuspal.com</a> or call us at XXX-XXX-XXXX.</p>
+    <div>
+      <p>Follow Us on Social Media:</p>
+      <a href="https://facebook.com/campuspal">Facebook</a>
+      <a href="https://twitter.com/campuspal">Twitter</a>
+      <a href="https://instagram.com/campuspal">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>
